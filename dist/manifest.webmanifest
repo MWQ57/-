@@ -1,0 +1,22 @@
+{
+  "name": "智能衣橱",
+  "short_name": "智能衣橱",
+  "description": "衣物数字化管理、智能搭配、天气穿搭、场景穿搭和每日穿搭日志",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf8f6",
+  "theme_color": "#d95a4f",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "shopping", "productivity"],
+  "screenshots": []
+}

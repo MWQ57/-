@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --color-brand-50: #fdf4f3;
+  --color-brand-100: #fce8e6;
+  --color-brand-200: #f9d0cc;
+  --color-brand-300: #f3a9a2;
+  --color-brand-400: #ea7a70;
+  --color-brand-500: #d95a4f;
+  --color-brand-600: #c43f35;
+  --color-brand-700: #a4332b;
+  --color-brand-800: #882e28;
+  --color-brand-900: #712b26;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #faf8f6 0%, #f5f0eb 50%, #ede8e3 100%);
+  color: #1a1a1a;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4cfc8;
+  border-radius: 3px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+}
+
+.canvas-item {
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.canvas-item:active {
+  cursor: grabbing;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #f3a9a2;
+  box-shadow: 0 0 0 3px rgba(243, 169, 162, 0.22);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}
